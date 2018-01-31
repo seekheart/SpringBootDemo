@@ -1,0 +1,14 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  profiles:
+    active: default
+  datasource:
+    driver-class-name: org.h2.Driver
+server:
+  port: 9000
+security:
+  user:
+    name: user
+    password: asdf
