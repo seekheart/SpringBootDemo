@@ -16,4 +16,11 @@ public class SpringdemoApplication {
 		SpringApplication.run(SpringdemoApplication.class, args);
 	}
 
+	@Bean
+	public CommandLineRunner bootstrap(MessageRepository repository) {
+		return (args) -> {
+			repository.save(new Message(1L, "Hello"));
+			repository.save(new Message(2L, "Goodbye"));
+		};
+	}
 }
